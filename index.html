@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MRP Calculator</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <button type="button" id="signin">Sign in</button>
+        <button type="button" id="signup">Sign up</button>
+    </div>
+
+    <div class="top">
+        <h1 id="main-text">MRP Calculator</h1>
+        <h3 id="sec-text">Your Product,Your Price</h3>
+    </div>
+
+    <div class="main">
+        <div class="left">
+           
+                <form onsubmit="return false">
+                    <div class="head-text">
+                        <h2 id="headtext">Determine the price yourself</h2>
+                    </div>
+
+                    <div class="inner-box">
+                        <div>
+                            <label for="optionlist">Product</label>
+
+                            <select id="optionlist" onchange="fun()">
+                                <option value="">Select Product</option>
+                                <option value="SHIRT">SHIRT</option>
+                                <option value="Edigible Oil">Edigible Oil</option>
+                                <option value="Smartphone">Smartphone</option>
+                                <option value="Car">Car</option>
+                            </select>
+                        </div>
+                        
+
+                        <div>
+                            <label for="cost">Cost Price</label>
+                            <div>
+                                <input type="number" id="cost" name="cost" placeholder="Enter your cost price" min="0"
+                                    required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="cost">Margin</label>
+                            <div>
+                                <input type="number" id="margin" placeholder="Enter margin(in %)" min="0" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="gst">GST </label>
+                            <div>
+                                <p id="gst">-</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="submit" id="submit">Calculate</button>
+                        </div>
+                    </div>
+                </form>
+            
+        </div>
+
+    
+        <div class="right">
+            
+                <div class="prod"><h3>Product</h3>
+                    <p id="item">
+                </div>
+        
+                <div class="cp"><h3>Cost price</h3>
+                    <p id="showCost"></p>
+                </div>
+        
+                <div class="mp"><h3>Margin</h3> 
+                    <p id="showMargin"></p>
+                </div>
+        
+                <div class="sgst"><h3>GST rate</h3>
+                    <p id="showGST"></p>
+                </div>
+        
+                <div class="mrp"><h3>MRP</h3>
+                    <p id="mrp"></p>
+                </div>
+            
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+
+</html>
