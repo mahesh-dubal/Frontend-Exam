@@ -34,7 +34,6 @@ function fun() {
     let x = document.getElementById("optionlist");
     let value = x.value;
     document.getElementById("gst").innerHTML = calGST(value);
-    //console.log(calGST(value));
 }
 
 function item() {
@@ -48,23 +47,51 @@ function item() {
 submitBtn.addEventListener("click", () => {
 
     let costValue = document.getElementById("cost").value;
-    console.log(costValue);
 
     let marginValue = document.getElementById("margin").value;
-    console.log(marginValue);
 
     let gstValue = document.getElementById("gst").innerHTML;
-    console.log(gstValue);
 
     let totalCost = parseFloat(costValue) + parseFloat(costValue * (marginValue / 100)) + parseFloat(costValue * (gstValue / 100));
-
-    console.log(totalCost);
+    var finalCost = totalCost.toFixed(2);
 
     document.getElementById("item").innerHTML = ` &nbsp: ${item()}`;
     document.getElementById("showCost").innerHTML = " &nbsp= " +"₹"+costValue;
     document.getElementById("showMargin").innerHTML = " &nbsp= "+marginValue+"%";
     document.getElementById("showGST").innerHTML = " &nbsp= " +gstValue+"%";
-    document.getElementById("mrp").innerHTML = " &nbsp= "+"₹"+totalCost;
+    document.getElementById("mrp").innerHTML = " &nbsp= "+"₹"+finalCost;
     
 })
+
+
+
+// For Mobile View
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+
+// Calculate button disabled untill all fields are entered
+(function() {
+    $('div > input').keyup(function() {
+
+        var empty = false;
+        $('div > input').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#submit').attr('disabled', 'disabled');
+        } else {
+            $('#submit').removeAttr('disabled'); 
+        }
+    });
+})()
 
