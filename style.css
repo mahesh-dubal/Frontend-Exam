@@ -10,13 +10,100 @@ body {
     background: radial-gradient(138.89% 303.35% at 140% 66.21%, #1F1E33 0%, #2A224F 87.18%);
 }
 
+/*------------------------------------------------- Mobile-------------------------------------- */
+.mobile-container {
+    display: none;
+    max-width: 100%;
+    margin: auto;
+    color: white;
+    border-radius: 10px;
+}
+
+.logoo {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+#org {
+    color: #F08C00;
+}
+
+.topnav {
+    overflow: hidden;
+    background: radial-gradient(138.89% 303.35% at 140% 66.21%, #1F1E33 0%, #2A224F 87.18%);
+    position: relative;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+}
+
+.topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* --------------------------------------------------------------------------------------- */
+.logo {
+    display: flex;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2rem;
+    color: #FFFFFF;
+}
+
+#org {
+    color: #F08C00;
+}
+
 .navbar {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     margin: 2rem;
 }
 
-button:hover {
+.navlist {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 3rem;
+    padding-left: 10rem;
+}
+
+.navlist li {
+    list-style-type: none;
+}
+
+.navlist a {
+    text-decoration: none;
+}
+
+.navlist>li>a {
+    color: #E5E7EB;
+    padding: 0.5rem;
+}
+
+
+li:hover {
     border: 1px solid #FFFFFF;
 }
 
@@ -31,7 +118,6 @@ button:hover {
     background: none;
     border: radial-gradient(138.89% 303.35% at 140% 66.21%, #1F1E33 0%, #2A224F 87.18%);
 }
-
 
 #signin {
     margin: 0 1rem;
@@ -65,8 +151,6 @@ button:hover {
     color: #B6B0D3;
 }
 
-
-
 .main {
     display: flex;
     gap: 7rem;
@@ -75,9 +159,7 @@ button:hover {
     left: 0;
     margin: 3rem;
     padding: 3rem;
-    /* flex-wrap: wrap; */
 }
-
 
 .left {
     flex: 65%;
@@ -94,6 +176,11 @@ form {
     border: 1px solid #DDDCE0;
     border-radius: 12px;
 }
+
+/* .in-form {
+    display: flex;
+    justify-content: center;
+} */
 
 .head-text {
     display: flex;
@@ -121,6 +208,7 @@ form {
     position: relative;
 }
 
+/* ------------------------------Right Section------------------------------------------------ */
 .right {
     flex: 35%;
     display: flex;
@@ -149,16 +237,12 @@ form {
     padding: 2rem;
     row-gap: 1rem;
     background: rgba(32, 28, 55, 0.4);
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 1rem;
     line-height: 182%;
     color: #FFFFFF;
 }
-
-
-
 
 #optionlist,
 #cost,
@@ -185,11 +269,205 @@ form {
     align-items: center;
     width: 100%;
     font-weight: 800;
-    color: #FFFFFF;
-    background: #008CBA;
+    color: black;
+    background: #F08C00;
     border-radius: 10px;
     margin-top: 1rem;
     padding: 0.5rem 5rem;
 }
 
+/* ------------------------------Footer------------------------------------------------- */
 
+#footer {
+    background: radial-gradient(138.89% 303.35% at 140% 66.21%, #1F1E33 0%, #2A224F 87.18%);
+    color: #FFFFFF;
+    padding: 1rem 3rem;
+    text-align: center;
+}
+
+
+#right-footer {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    float: right;
+    color: white;
+    margin: 1rem;
+}
+
+#right-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:960px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: none;
+    }
+
+    #main-text {
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: 100%;
+        color: #FFFFFF;
+    }
+
+    .main {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+        margin: 1rem 0 0 0;
+        gap: 1rem;
+    }
+
+    form {
+        font-size: larger;
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+        margin: 0 1rem;
+        font-size: large;
+        box-shadow: 0px 4px 40px rgb(0 0 0 / 5%);
+    }
+
+    .head-text {
+        font-size: small;
+    }
+
+    #optionlist,
+    #cost,
+    #margin {
+        padding: 1rem 2rem;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border-radius: 5px;
+        text-align: left;
+    }
+
+    #gst {
+        padding: 1rem 2rem;
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin-bottom: 2.5rem;
+    }
+
+    #submit {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: large;
+        font-weight: 800;
+        color: #FFFFFF;
+        background: #008CBA;
+        border-radius: 10px;
+        margin-top: 2rem;
+        padding: 1rem 5rem;
+    }
+
+    .navbar {
+        flex-wrap: warp;
+        margin: 2rem;
+        justify-content: center;
+    }
+
+    .navlist li {
+        font-size: 1.5rem;
+        justify-content: space-around;
+    }
+
+    .logo {
+        justify-content: flex-start;
+        font-size: 2rem;
+        color: #FFFFFF;
+    }
+
+
+    .prod,
+    .cp,
+    .mp,
+    .sgst,
+    .mrp {
+        font-size: large;
+    }
+
+}
+
+
+@media screen and (max-width:415px) {
+
+    .left {
+        margin: 0;
+        overflow: scroll;
+    }
+
+    #optionlist,
+    #cost,
+    #margin {
+        padding: 1rem 2rem;
+        width: 95%;
+        margin-bottom: 1.5rem;
+        border-radius: 5px;
+        text-align: left;
+    }
+
+    #gst {
+        padding: 1rem 2rem;
+        width: 95%;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin-bottom: 2.5rem;
+    }
+
+    #submit {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        font-size: large;
+        font-weight: 800;
+        color: #FFFFFF;
+        background: #008CBA;
+        border-radius: 10px;
+        margin-top: 2rem;
+        padding: 1rem 5rem;
+    }
+
+    #main-text {
+        text-align: center;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 2rem;
+        line-height: 100%;
+        color: #FFFFFF;
+    }
+
+    .head-text {
+        font-size: 1rem;
+    }
+
+}
+
+/* For hamburger menu */
+@media screen and (max-width:730px) {
+    .mobile-container {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+    }
+}
