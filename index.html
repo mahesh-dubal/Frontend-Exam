@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>MRP Calculator</title>
+</head>
+
+<body>
+    <div class="top">
+        <div class="mobile-container">
+
+            <!-- Top Navigation Menu -->
+            <div class="topnav">
+                <a href="#home" class="logoo"><span id="org">MRP</span>.com</a>
+
+                <div id="myLinks">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Sign up</a>
+                    <a href="#">Sign in</a>
+                </div>
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+        <header class="navigation">
+
+            <h1 class="logo"><span id="org">MRP</span>.com</h1>
+
+            <ul class="navlist">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Sign up</a></li>
+                <li><a href="#">Sign in</a></li>
+            </ul>
+
+        </header>
+
+
+        <div class="hero">
+            <div class="column">
+                <img src="./images/hd.png" alt="advertise">
+            </div>
+
+
+            <div class="column">
+                <div class="right-box">
+                    <div class="icons">
+                        <a href="#" class="fa fa-google"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                    </div>
+
+                    <div id="name-text">
+                        <h2>MRP CALCULATOR</h2>
+                    </div>
+
+                    <div id="sec-text">
+                        <p>It will help you to find selling price of your product quickly.</p>
+                        <p>No need to remember tax percentage.</p>
+                    </div>
+
+                    <button type="button" id="more-btn" onclick="loadToolPage()">Try Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="benefit">
+        <ul>
+            <h2><u>Benefits</u></h2>
+            <li>Easy to find Selling Price of Your Product</li>
+            <li>No need to remember gst on product</li>
+            <li>Add whatever margin you want</li>
+            <li>Sell your product with perfect selling price</li>
+        </ul>
+    </div>
+    <div class="middle">
+        <div class="column">
+            <img src="./images/MRP-Calculator.png" alt="Tool Image">
+        </div>
+
+        <div class="column">
+            <div class="work">
+                <ul>
+                    <h1>How it works?</h1>
+                    <li>Select your product</li>
+                    <li>Enter the cost of your product</li>
+                    <li>Enter the margin you want (in percentage)</li>
+                    <li>Click on Calculate to find MRP</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="footer">
+        <span id="footer-content">2022 &copy All Right Reserved</span>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        const loadToolPage = () => {
+            return window.location.href = "./tool.html";
+        }
+    </script>
+</body>
+
+</html>
